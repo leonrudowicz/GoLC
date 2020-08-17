@@ -63,3 +63,92 @@ leonrudowicz@Leons-MacBook-Pro GoLC % ./v03_res
  0  0  0  0 
  0  0  0  0 
 ```
+
+## Excercise 04
+Looping everything
+### Compiling and using the Program
+use `gcc v04.c -o v04_res`to compile the code into the `v04_res`binary. it then can be run using `./v04_res`.
+### Result
+```console
+leonrudowicz@Leons-MacBook-Pro GoLC % ./v04_res           
+
+
+Iteration: 0
+
+0 1 0 0 
+0 1 0 0 
+0 1 1 0 
+0 1 0 0 
+
+
+Iteration: 1
+
+0 0 0 0 
+1 1 0 0 
+1 1 1 0 
+0 1 1 0 
+
+
+Iteration: 2
+
+0 0 0 0 
+1 0 0 0 
+1 0 1 0 
+0 1 1 0 
+
+
+Iteration: 3
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 4
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 5
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 6
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 7
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 8
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+
+
+Iteration: 9
+
+0 0 0 0 
+0 0 0 0 
+0 1 1 0 
+0 1 1 0 
+```

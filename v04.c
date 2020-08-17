@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   v03.c                                              :+:      :+:    :+:   */
+/*   v04.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lrudowic <lrudowic@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/17 15:34:54 by lrudowic          #+#    #+#             */
-/*   Updated: 2020/08/17 17:27:06 by lrudowic         ###   ########.fr       */
+/*   Updated: 2020/08/17 17:50:21 by lrudowic         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "v03.h"
+#include "v04.h"
 
 void printblock(const char *b, int size)
 {
@@ -21,7 +21,7 @@ void printblock(const char *b, int size)
     {
         if ((i % size) == 0)
             printf("\n");
-        printf(" %d ", b[i]);
+        printf("%d ", b[i]);
     }
     printf("\n");
 }
@@ -93,18 +93,32 @@ void gen_nextgen(const char *block, char *res_block, int size)
 
 int main(int ac, char **av)
 {
+    int its = 10;
     char block[] = {
-        0, 1, 0, 0,
-        0, 1, 0, 0,
-        0, 1, 0, 0,
-        0, 0, 0, 0};
+    0, 1, 0,0,
+    0, 1, 0,0,
+    0, 1, 1,0,
+    0, 1, 0,0};
+
+    char cls_block[] = {
+    0, 0, 0,0,
+    0, 0, 0,0,
+    0, 0, 0,0,
+    0, 0, 0,0};
 
     //Get the Dimensions of the Initial Array
     int blocksize = (int)sqrt(sizeof(block));
     //Create Result array
     char res_block[blocksize * blocksize];
 
-    printblock(block, blocksize);
-    gen_nextgen(block, res_block, blocksize);
-    printblock(res_block, blocksize);
+    char *b;
+    b = block;
+    int i;
+    for (i = 0; i < its; i++)
+    {
+        printf("\n\nIteration: %d\n", i);
+        printblock(b, blocksize);
+        gen_nextgen(b, res_block, blocksize);
+        b  = res_block;
+    }
 }
