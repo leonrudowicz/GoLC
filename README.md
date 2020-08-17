@@ -65,7 +65,9 @@ leonrudowicz@Leons-MacBook-Pro GoLC % ./v03_res
 ```
 
 ## Excercise 04
-Looping everything
+My first idea was to create a shell script, requesting an initial block, and then running the program, and feeding its own output into itself. That would have provided live output, and you would be able to see the fields moving. Unfortunately i ran into problems, when converting the Console output string into the needed char array. (With C you have to be precise when it comes to datatypes.)
+
+The way the looping is implemented right now just using an internal for loop, overriding the old block.
 ### Compiling and using the Program
 use `gcc v04.c -o v04_res`to compile the code into the `v04_res`binary. it then can be run using `./v04_res`.
 ### Result
